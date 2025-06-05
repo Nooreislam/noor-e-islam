@@ -1,20 +1,91 @@
 
-<!DOCTYPE html>
-<html lang="bn">
+<!DOCTYPE html><html lang="bn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Noor-e-Islam</title>
+  <style>
+    body {
+      font-family: 'Noto Sans Bengali', sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+  background-color: #2e7d32;
+  color: white;
+}
+
+.search-box {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.search-box input[type="text"] {
+  padding: 10px;
+  font-size: 1em;
+  width: 80%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.toggle-btn {
+  margin: 10px auto;
+  display: block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #388e3c;
+  color: white;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #e0e0e0;
+  padding: 20px;
+  text-align: center;
+}
+
+.social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+  </style>
 </head>
-<body>
-  <h1>আসসালামু আলাইকুম!</h1>
-  <p>স্বাগতম Noor-e-Islam ওয়েবসাইটে। এখানে আপনি কোরআন, হাদীস ও দোয়া পাবেন।</p>
-  <nav>
-    <a href="quran.html">কোরআন</a> |
-    <a href="hadith.html">হাদীস</a> |
-    <a href="duas.html">দোয়া</a> |
-    <a href="about.html">আমাদের সম্পর্কে</a> |
-    <a href="contact.html">যোগাযোগ</a>
-  </nav>
-</body>
+<body class="light-mode">
+  <header>
+    <h1>নূর-ই-ইসলাম</h1>
+    <p>ইসলামিক জ্ঞান শেয়ার করুন, সওয়াব অর্জন করুন</p>
+  </header>  <div class="search-box">
+    <input type="text" placeholder="আপনার বিষয় লিখুন...">
+  </div><button class="toggle-btn" onclick="toggleMode()">দিন / রাত মোড পরিবর্তন করুন</button>
+
+  <footer>
+    <p>যোগাযোগ করুন:</p>
+    <div class="social-links">
+      <a href="https://wa.me/your-number" target="_blank">WhatsApp</a>
+      <a href="https://facebook.com/your-page" target="_blank">Facebook</a>
+      <a href="https://youtube.com/your-channel" target="_blank">YouTube</a>
+    </div>
+  </footer>  <script>
+    function toggleMode() {
+      const body = document.body;
+      body.classList.toggle('dark-mode');
+      body.classList.toggle('light-mode');
+    }
+  </script></body>
 </html>
