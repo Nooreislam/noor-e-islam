@@ -1,91 +1,102 @@
-
-<!DOCTYPE html><html lang="bn">
-<head>
+<!DOCTYPE html><html lang="bn"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Noor-e-Islam</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+    function searchContent() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const sections = document.querySelectorAll(".content-section a");
+      sections.forEach(section => {
+        section.style.display = section.innerText.toLowerCase().includes(query) ? "inline-block" : "none";
+      });
+    }
+  </script>
   <style>
     body {
       font-family: 'Noto Sans Bengali', sans-serif;
+      background-color: #ffffff;
+      color: #000000;
       margin: 0;
       padding: 0;
-      transition: background-color 0.3s, color 0.3s;
-    }body.light-mode {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-body.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
-}
-
-header {
-  padding: 20px;
-  text-align: center;
-  background-color: #2e7d32;
-  color: white;
-}
-
-.search-box {
-  margin: 20px auto;
-  text-align: center;
-}
-
-.search-box input[type="text"] {
-  padding: 10px;
-  font-size: 1em;
-  width: 80%;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.toggle-btn {
-  margin: 10px auto;
-  display: block;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #388e3c;
-  color: white;
-  cursor: pointer;
-}
-
-footer {
-  background-color: #e0e0e0;
-  padding: 20px;
-  text-align: center;
-}
-
-.social-links a {
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #2e7d32;
-}
-
-  </style>
-</head>
-<body class="light-mode">
-  <header>
-    <h1>নূর-ই-ইসলাম</h1>
-    <p>ইসলামিক জ্ঞান শেয়ার করুন, সওয়াব অর্জন করুন</p>
-  </header>  <div class="search-box">
-    <input type="text" placeholder="আপনার বিষয় লিখুন...">
-  </div><button class="toggle-btn" onclick="toggleMode()">দিন / রাত মোড পরিবর্তন করুন</button>
-
-  <footer>
-    <p>যোগাযোগ করুন:</p>
-    <div class="social-links">
-      <a href="https://wa.me/your-number" target="_blank">WhatsApp</a>
-      <a href="https://facebook.com/your-page" target="_blank">Facebook</a>
-      <a href="https://youtube.com/your-channel" target="_blank">YouTube</a>
-    </div>
-  </footer>  <script>
-    function toggleMode() {
-      const body = document.body;
-      body.classList.toggle('dark-mode');
-      body.classList.toggle('light-mode');
+      text-align: center;
     }
-  </script></body>
-</html>
+    .dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+    header {
+      background-color: #006400;
+      padding: 1rem;
+      color: white;
+    }
+    .search-bar {
+      margin: 20px;
+    }
+    .search-bar input {
+      padding: 10px;
+      width: 80%;
+      max-width: 400px;
+      border: 2px solid #006400;
+      border-radius: 5px;
+    }
+    .toggle-btn {
+      margin: 10px;
+      padding: 10px;
+      border: none;
+      background-color: #006400;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+    }
+    .content-section {
+      margin: 20px 0;
+    }
+    .content-section a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 15px;
+      background-color: #228B22;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    footer {
+      background-color: #f1f1f1;
+      padding: 20px;
+      margin-top: 30px;
+    }
+    footer a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #006400;
+    }
+  </style>
+</head><body>
+  <header>
+    <h1>Noor-e-Islam</h1>
+  </header>  <img src="file-LJCS4kAB5Jy3eaqR7UfbDW" alt="মসজিদে নববী">  <div class="search-bar">
+    <input type="text" id="searchInput" onkeyup="searchContent()" placeholder="আপনি কী খুঁজছেন...">
+    <button class="toggle-btn" onclick="toggleMode()">দিন/রাত্রি মোড</button>
+  </div>  <div class="content-section">
+    <a href="#">কোরআন</a>
+    <a href="#">হাদিস</a>
+    <a href="#">দোয়া</a>
+    <a href="#">ইসলামী ইতিহাস</a>
+    <a href="#">আমাদের সম্পর্কে</a>
+    <a href="#">যোগাযোগ</a>
+  </div>  <footer>
+    <p>Follow us:</p>
+    <a href="https://wa.me/your_number" target="_blank">WhatsApp</a>
+    <a href="https://facebook.com/your_page" target="_blank">Facebook</a>
+    <a href="https://youtube.com/your_channel" target="_blank">YouTube</a>
+  </footer>
+</body></html>
