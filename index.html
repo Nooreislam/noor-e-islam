@@ -1,102 +1,127 @@
-<!DOCTYPE html><html lang="bn"><head>
+<!DOCTYPE html>
+<html lang="bn">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Noor-e-Islam</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
-  <script>
-    function toggleMode() {
-      document.body.classList.toggle("dark-mode");
-    }
-    function searchContent() {
-      const query = document.getElementById("searchInput").value.toLowerCase();
-      const sections = document.querySelectorAll(".content-section a");
-      sections.forEach(section => {
-        section.style.display = section.innerText.toLowerCase().includes(query) ? "inline-block" : "none";
-      });
-    }
-  </script>
+  <title>Noor E Islam</title>
+  
+  <!-- Google AdSense Code -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5965378911334395" crossorigin="anonymous"></script>
+
   <style>
     body {
-      font-family: 'Noto Sans Bengali', sans-serif;
-      background-color: #ffffff;
-      color: #000000;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      text-align: center;
+      background-color: white;
+      color: black;
+      transition: background-color 0.5s, color 0.5s;
     }
+
     .dark-mode {
       background-color: #121212;
-      color: #ffffff;
+      color: white;
     }
+
     header {
-      background-color: #006400;
-      padding: 1rem;
-      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 28px;
+      font-weight: bold;
     }
-    .search-bar {
-      margin: 20px;
+
+    .mosque-img {
+      width: 100%;
+      max-height: 350px;
+      object-fit: cover;
     }
-    .search-bar input {
-      padding: 10px;
-      width: 80%;
-      max-width: 400px;
-      border: 2px solid #006400;
-      border-radius: 5px;
+
+    .topics {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
     }
-    .toggle-btn {
+
+    .topic {
       margin: 10px;
-      padding: 10px;
+      padding: 15px 25px;
+      background: #f0f0f0;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .dark-mode .topic {
+      background: #333;
+    }
+
+    .topic:hover {
+      background-color: #ddd;
+    }
+
+    .dark-mode .topic:hover {
+      background-color: #444;
+    }
+
+    .footer {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .social a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 18px;
+      color: inherit;
+    }
+
+    .mode-toggle {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 5px 10px;
       border: none;
-      background-color: #006400;
-      color: white;
+      background: #ccc;
       border-radius: 5px;
       cursor: pointer;
     }
-    img {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-    }
-    .content-section {
-      margin: 20px 0;
-    }
-    .content-section a {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 15px;
-      background-color: #228B22;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-    }
-    footer {
-      background-color: #f1f1f1;
-      padding: 20px;
-      margin-top: 30px;
-    }
-    footer a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #006400;
-    }
   </style>
-</head><body>
+</head>
+<body>
+
+  <button class="mode-toggle" onclick="toggleMode()">দিন/রাত্রি</button>
+
   <header>
-    <h1>Noor-e-Islam</h1>
-  </header>  <img src="file-LJCS4kAB5Jy3eaqR7UfbDW" alt="মসজিদে নববী">  <div class="search-bar">
-    <input type="text" id="searchInput" onkeyup="searchContent()" placeholder="আপনি কী খুঁজছেন...">
-    <button class="toggle-btn" onclick="toggleMode()">দিন/রাত্রি মোড</button>
-  </div>  <div class="content-section">
-    <a href="#">কোরআন</a>
-    <a href="#">হাদিস</a>
-    <a href="#">দোয়া</a>
-    <a href="#">ইসলামী ইতিহাস</a>
-    <a href="#">আমাদের সম্পর্কে</a>
-    <a href="#">যোগাযোগ</a>
-  </div>  <footer>
-    <p>Follow us:</p>
-    <a href="https://wa.me/your_number" target="_blank">WhatsApp</a>
-    <a href="https://facebook.com/your_page" target="_blank">Facebook</a>
-    <a href="https://youtube.com/your_channel" target="_blank">YouTube</a>
-  </footer>
-</body></html>
+    Noor E Islam
+  </header>
+
+  <img src="mosjid.jpg" alt="মসজিদে নববী" class="mosque-img">
+
+  <div class="topics">
+    <div class="topic">কুরআন</div>
+    <div class="topic">হাদীস</div>
+    <div class="topic">দোআ</div>
+    <div class="topic">নামাজ</div>
+    <div class="topic">ইসলামিক ইতিহাস</div>
+    <div class="topic">জিকির</div>
+    <div class="topic">ফিকহ</div>
+  </div>
+
+  <div class="footer">
+    <div class="social">
+      <a href="https://wa.me/your-number" target="_blank">WhatsApp</a> |
+      <a href="https://facebook.com/yourpage" target="_blank">Facebook</a> |
+      <a href="https://youtube.com/yourchannel" target="_blank">YouTube</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+
+</body>
+</html>
